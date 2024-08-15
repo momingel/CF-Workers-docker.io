@@ -26,6 +26,9 @@ function routeByHosts(host) {
 		"test": "registry-1.docker.io",
 	};
 
+	consolo.log('hhhhhh');
+	consolo.log(host);
+
 	if (host in routes) return [ routes[host], false ];
 	else return [ hub_host, true ];
 }
