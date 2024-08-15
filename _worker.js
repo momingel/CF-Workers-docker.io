@@ -26,9 +26,6 @@ function routeByHosts(host) {
 		"test": "registry-1.docker.io",
 	};
 
-	console.log('hhhhhh');
-	console.log(host);
-
 	if (host in routes) return [ routes[host], false ];
 	else return [ hub_host, true ];
 }
@@ -132,9 +129,6 @@ export default {
 		} else {
 			checkHost = routeByHosts(hostTop);
 			hub_host = checkHost[0]; // 获取上游地址
-
-			console.log('hostTop');
-			console.log(hostTop);
 		}
 
 		const fakePage = checkHost ? checkHost[1] : false; // 确保 fakePage 不为 undefined
