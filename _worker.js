@@ -132,6 +132,9 @@ export default {
 		} else {
 			checkHost = routeByHosts(hostTop);
 			hub_host = checkHost[0]; // 获取上游地址
+
+			console.log('hostTop');
+			console.log(hostTop);
 		}
 
 		const fakePage = checkHost ? checkHost[1] : false; // 确保 fakePage 不为 undefined
